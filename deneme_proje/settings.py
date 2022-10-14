@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 '127.0.0.1',
-'sekodeneme2.herokuapp.com'
+'sekokose.herokuapp.com'
 
 ]
 

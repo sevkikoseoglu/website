@@ -1,6 +1,8 @@
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.shortcuts import  render, redirect
 from .forms import NewUserForm
-from django.contrib.auth import login, authenticate #add this
+from django.contrib.auth import login, authenticate, logout  # add this
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm #add this
 
@@ -36,3 +38,7 @@ def login_request(request):
 
 def homepage(request):
 	return render(request=request, template_name="homepage.html")
+
+def logout_request(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('homepage'))

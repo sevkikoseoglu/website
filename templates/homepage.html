@@ -13,11 +13,19 @@
 </head>
 <body>
 <h1>Blog Sitesi Çok Yakında</h1>&emsp; &emsp;
-<button type="button">
-    <a href="{% url 'register' %}">Register</a>
-</button>&emsp; &emsp;
-<button type="button">
-    <a href="{% url 'login' %}">Login</a>
-</button>
+{% if request.user.is_authenticated %}
+
+
+    <h1>Hoşgeldin   {{ request.user.username }} </h1>
+    <button type="button"><a href="{% url 'logout' %}">Çıkış</a>
+    </button>&emsp; &emsp;
+
+{% else %}
+                <button type="button"><a href="{% url 'register' %}">Register</a>
+                </button>&emsp; &emsp;
+                <button type="button"><a href="{% url 'login' %}">Login</a>
+                </button>
+{% endif %}
+
 </body>
 </html>

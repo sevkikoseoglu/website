@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Sitesi</title>
+    {% if messages %}
+    <ul class="messagelist">
+        {% for message in messages %}
+            <li>{{ message.message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</head>
+<body>
+<h1>Blog Sitesi Çok Yakında</h1>
+</body>
+</html>

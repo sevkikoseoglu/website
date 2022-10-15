@@ -12,20 +12,21 @@
 {% endif %}
 </head>
 <body>
-<h1>Blog Sitesi Çok Yakında</h1>&emsp; &emsp;
-{% if request.user.is_authenticated %}
+<div class="container-fluid">
+    <h1>Blog Sitesi Çok Yakında</h1>&emsp; &emsp;
+    {% if request.user.is_authenticated %}
 
 
-    <h1>Hoşgeldin   {{ request.user.username }} </h1>
-    <button type="button"><a href="{% url 'logout' %}">Çıkış</a>
-    </button>&emsp; &emsp;
+        <h1>Hoşgeldin   {{ request.user.username }} </h1>
+        <button type="button"><a href="{% url 'logout' %}">Çıkış</a>
+        </button>&emsp; &emsp;
 
-{% else %}
-                <button type="button"><a href="{% url 'register' %}">Register</a>
-                </button>&emsp; &emsp;
-                <button type="button"><a href="{% url 'login' %}">Login</a>
-                </button>
-{% endif %}
-
+    {% else %}
+                    <button type="button"><a href="{% url 'register' %}">Register</a>
+                    </button>&emsp; &emsp;
+                    <button type="button"><a href="{% url 'login' %}">Login</a>
+                    </button>
+    {% endif %}
+</div>
 </body>
 </html>

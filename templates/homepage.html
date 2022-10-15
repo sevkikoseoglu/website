@@ -12,7 +12,8 @@
 {% endif %}
 </head>
 <body>
-<div class="container-fluid">
+<div class="container" style="text-align: center;margin-top: 50px" >
+
     <h1>Blog Sitesi Çok Yakında</h1>&emsp; &emsp;
     {% if request.user.is_authenticated %}
 
@@ -27,6 +28,7 @@
                     <button type="button"><a href="{% url 'login' %}">Login</a>
                     </button>
     {% endif %}
+
 </div>
 </body>
 </html>
